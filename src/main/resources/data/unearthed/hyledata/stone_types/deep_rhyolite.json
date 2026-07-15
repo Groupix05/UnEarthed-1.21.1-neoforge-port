@@ -1,0 +1,17 @@
+{
+  "base": "unearthed:deep_rhyolite",
+  "deepslate": "unearthed:deep_rhyolite",
+  "cobble": "",
+  "dirt": "",
+  "grass": "",
+  "ores": {
+    "minecraft:iron_ore": "unearthed:deep_rhyolite",
+    "minecraft:coal_ore": "unearthed:deep_rhyolite",
+    "minecraft:copper_ore": "unearthed:deep_rhyolite",
+    "minecraft:gold_ore": "unearthed:deep_rhyolite",
+    "minecraft:lapis_ore": "unearthed:deep_rhyolite",
+    "minecraft:redstone_ore": "unearthed:deep_rhyolite",
+    "minecraft:diamond_ore": "unearthed:deep_rhyolite",
+    "minecraft:emerald_ore": "unearthed:deep_rhyolite"
+  }
+}

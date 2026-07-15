@@ -1,0 +1,187 @@
+package lilypuree.unearthed.block.schema;
+
+import lilypuree.unearthed.platform.Services;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static lilypuree.unearthed.block.schema.Variants.*;
+
+public class BlockSchemas {
+    private static float stoneHardness = 1.5f;
+    private static float cobbleHardness = 2.0f;
+    private static float stoneResistance = 6.0f;
+    private static float miscResistance = 0.5f;
+    private static BlockBehaviour.Properties stoneProperty = BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(stoneHardness, stoneResistance).mapColor(MapColor.STONE);
+    private static final SoundType OVERGROWN_SOUND = Services.PLATFORM.createSoundType(1.0F, 1.0F, () -> SoundEvents.STONE_BREAK, () -> SoundEvents.GRASS_STEP, () -> SoundEvents.STONE_PLACE, () -> SoundEvents.STONE_HIT, () -> SoundEvents.GRASS_FALL);
+
+
+    public static List<BlockSchema> ROCK_TYPES = new ArrayList<>();
+
+    public static final BlockSchema PHYLLITE;
+    public static final BlockSchema SLATE;
+    public static final BlockSchema GABBRO;
+    public static final BlockSchema GRANODIORITE;
+    public static final BlockSchema RHYOLITE;
+    public static final BlockSchema WHITE_GRANITE;
+    public static final BlockSchema LIMESTONE;
+    public static final BlockSchema BEIGE_LIMESTONE;
+    public static final BlockSchema GREY_LIMESTONE;
+    public static final BlockSchema SILTSTONE;
+    public static final BlockSchema MUDSTONE;
+    public static final BlockSchema CONGLOMERATE;
+    public static final BlockSchema DACITE;
+    public static final BlockSchema SCHIST;
+
+
+    public static final BlockSchema WEATHERED_RHYOLITE;
+    public static final BlockSchema PILLOW_BASALT;
+    public static final BlockSchema PUMICE;
+    public static final BlockSchema DOLERITE;
+    public static final BlockSchema MARBLE;
+    public static final BlockSchema LIGNITE;
+    public static final BlockSchema QUARTZITE;
+    public static final BlockSchema KIMBERLITE;
+    public static final BlockSchema DOLOMITE;
+
+    public static final BlockSchema DARK_SLATE;
+    public static final BlockSchema DEEP_BEIGE_LIMESTONE;
+    public static final BlockSchema DEEP_CONGLOMERATE;
+    public static final BlockSchema DEEP_GABBRO;
+    public static final BlockSchema DEEP_GRANODIORITE;
+    public static final BlockSchema DEEP_GREY_LIMESTONE;
+    public static final BlockSchema DEEP_LIMESTONE;
+    public static final BlockSchema DEEP_MUDSTONE;
+    public static final BlockSchema DEEP_PHYLLITE;
+    public static final BlockSchema DEEP_RHYOLITE;
+    public static final BlockSchema DEEP_SILTSTONE;
+    public static final BlockSchema DEEP_WEATHERED_RHYOLITE;
+    public static final BlockSchema DEEP_WHITE_GRANITE;
+    public static final BlockSchema COBBLED_DEEPSLATE;
+
+    public static final BlockSchema GRANITE;
+    public static final BlockSchema DIORITE;
+    public static final BlockSchema ANDESITE;
+    public static final BlockSchema SANDSTONE;
+    public static final BlockSchema STONE;
+
+    static {
+        List<BlockVariant> basic = create(BASIC);
+
+        List<BlockVariant> kimberlite = create(Variants.KIMBERLITE);
+
+        List<BlockVariant> stone_like = create(ALL_BLOCKS_PLUS, COBBLED, MOSSY_COBBLED, BRICKS, MOSSY_BRICKS, CRACKED_BRICKS, CHISELED_BRICKS);
+        List<BlockVariant> blackstone_like = create(ALL_BLOCKS_PLUS, POLISHED, POLISHED_BRICKS, CHISELED_POLISHED, CRACKED_POLISHED_BRICKS);
+
+        List<BlockVariant> basalt_like = create(PILLAR, POLISHED_PILLAR);
+        List<BlockVariant> sandstone_like = create(SEDIMENTARY, SMOOTH, CUT, CHISELED);
+        List<BlockVariant> mudstone = create(SEDIMENTARY, CUT, CHISELED_FULL);
+
+        List<BlockVariant> secondary = create(ALL_BASE_BLOCKS, POLISHED);
+        List<BlockVariant> decorative = create(BASIC);
+
+        List<BlockVariant> schist = create(Variants.SCHIST);
+        List<BlockVariant> limestone = create(ALL_BASE_BLOCKS, COBBLED, BRICKS, PILLAR_BLOCK, CHISELED_FULL);
+        List<BlockVariant> beige_limestone = create(SEDIMENTARY, COBBLED, BRICKS, PILLAR_BLOCK, CHISELED);
+
+        List<BlockVariant> secondary_no_ores = create(SECONDARY_NO_ORES, POLISHED);
+        List<BlockVariant> vanilla_like = create(ALL_BLOCKS_NO_ORES);
+        List<BlockVariant> intrusive = create(Variants.VANILLA, OVERGROWN);
+
+        PHYLLITE = register("phyllite", stone_like);
+        SLATE = register("slate", stone_like);
+
+        GABBRO = register("gabbro", blackstone_like);
+        GRANODIORITE = register("granodiorite", blackstone_like);
+        RHYOLITE = register("rhyolite", blackstone_like);
+        WHITE_GRANITE = register("white_granite", blackstone_like);
+        LIMESTONE = register("limestone", limestone);
+        BEIGE_LIMESTONE = register("beige_limestone", beige_limestone);
+        GREY_LIMESTONE = register("grey_limestone", limestone);
+        SILTSTONE = registerSand("siltstone", sandstone_like);
+        MUDSTONE = registerSand("mudstone", mudstone);
+        CONGLOMERATE = registerSand("conglomerate", secondary);
+        KIMBERLITE = register("kimberlite", kimberlite);
+        MARBLE = register("marble", decorative);
+        PUMICE = register("pumice", basic);
+
+        QUARTZITE = register("quartzite", vanilla_like);
+        WEATHERED_RHYOLITE = register("weathered_rhyolite", basic);
+        DOLERITE = register("dolerite", basic);
+        SCHIST = register("schist", schist);
+        LIGNITE = registerSand("lignite", decorative);
+        PILLOW_BASALT = register("pillow_basalt", basic, stone().strength(3.0f, 6.0f));
+        DACITE = register("dacite", basalt_like, stone().strength(1.25f, 4.2F).sound(SoundType.BASALT));
+        DOLOMITE = register("dolomite", secondary_no_ores);
+
+//        deep variant schemas
+        DARK_SLATE = register("dark_slate", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
+        DEEP_BEIGE_LIMESTONE = register("deep_beige_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
+        DEEP_GREY_LIMESTONE = register("deep_grey_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
+        DEEP_LIMESTONE = register("deep_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
+        DEEP_PHYLLITE = register("deep_phyllite", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
+        DEEP_CONGLOMERATE = register("deep_conglomerate", create(DEEP_ORES));
+        DEEP_GABBRO = register("deep_gabbro", create(DEEP_ORES));
+        DEEP_GRANODIORITE = register("deep_granodiorite", create(DEEP_ORES));
+        DEEP_MUDSTONE = register("deep_mudstone", create(DEEP_ORES));
+        DEEP_RHYOLITE = register("deep_rhyolite", create(new BlockVariant("", Forms.BLOCK)));
+        DEEP_SILTSTONE = register("deep_siltstone", create(DEEP_ORES));
+        DEEP_WEATHERED_RHYOLITE = register("deep_weathered_rhyolite", create(new BlockVariant("", Forms.BLOCK)));
+        DEEP_WHITE_GRANITE = register("deep_white_granite", create(DEEP_ORES));
+        COBBLED_DEEPSLATE = register("cobbled_deepslate", create(new BlockVariant("", Forms.BLOCK)));
+
+//        vanilla block schemas
+        GRANITE = registerIntrusive("granite", intrusive, Blocks.GRANITE);
+        DIORITE = registerIntrusive("diorite", intrusive, Blocks.DIORITE);
+        ANDESITE = registerIntrusive("andesite", intrusive, Blocks.ANDESITE);
+        SANDSTONE = registerDefault("sandstone", List.of(Variants.SANDSTONE), Blocks.SANDSTONE);
+        STONE = registerDefault("stone", List.of(Variants.REGOLITHS), Blocks.STONE);
+    }
+
+    private static BlockSchema register(String name, List<BlockVariant> variants) {
+        return register(name, variants, stoneProperty);
+    }
+
+    private static BlockSchema registerSand(String name, List<BlockVariant> variants) {
+        return register(name, variants, sandStone());
+    }
+
+
+    private static BlockSchema registerIntrusive(String name, List<BlockVariant> variants, Block defaultBlock) {
+        BlockSchema schema = BlockSchema.builder(name, variants).defaultProperty(BlockBehaviour.Properties.ofFullCopy(defaultBlock))
+                .setProperty(Forms.OVERGROWN_ROCK, BlockBehaviour.Properties.ofFullCopy(defaultBlock).randomTicks().sound(OVERGROWN_SOUND)).build();
+        schema.setDefaultBlock(defaultBlock);
+        ROCK_TYPES.add(schema);
+        return schema;
+    }
+
+    private static BlockSchema registerDefault(String name, List<BlockVariant> variants, Block defaultBlock) {
+        BlockSchema schema = register(name, variants, BlockBehaviour.Properties.ofFullCopy(defaultBlock));
+        schema.setDefaultBlock(defaultBlock);
+        return schema;
+    }
+
+    private static BlockSchema register(String name, List<BlockVariant> variants, BlockBehaviour.Properties prop) {
+        BlockSchema schema = BlockSchema.builder(name, variants).defaultProperty(prop).build();
+        ROCK_TYPES.add(schema);
+        return schema;
+    }
+
+    private static List<BlockVariant> create(BlockVariant... variants) {
+        return List.of(variants);
+    }
+
+    private static BlockBehaviour.Properties stone() {
+        return BlockBehaviour.Properties.ofFullCopy(Blocks.STONE);
+    }
+
+    private static BlockBehaviour.Properties sandStone() {
+        return BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(0.8f).mapColor(MapColor.SAND);
+    }
+}

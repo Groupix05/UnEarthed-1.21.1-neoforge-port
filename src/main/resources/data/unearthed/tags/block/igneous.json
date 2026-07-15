@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "unearthed:gabbro",
+    "unearthed:granodiorite",
+    "unearthed:rhyolite",
+    "unearthed:white_granite",
+    "unearthed:dacite",
+    "unearthed:dolerite",
+    "unearthed:pillow_basalt",
+    "unearthed:weathered_rhyolite",
+    "unearthed:kimberlite",
+    "unearthed:pumice",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:basalt",
+    "unearthed:deep_gabbro",
+    "unearthed:deep_granodiorite",
+    "unearthed:deep_rhyolite",
+    "unearthed:deep_white_granite",
+    "unearthed:deep_weathered_rhyolite"
+  ]
+}

@@ -1,0 +1,66 @@
+modLoader="javafml" #mandatory
+loaderVersion="[4,)" #mandatory
+license="LGPLv3"
+
+[[mods]] #mandatory
+modId="unearthed" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Unearthed" #mandatory
+logoFile="logo.png" #optional
+
+credits="Corgi Taco & Aocawol for the original mod; lilypuree for Hyle (worldgen engine, now bundled)" #optional
+authors="lilypuree, Mysticpasta1" #optional
+description='''
+A geologically focused mod that makes exploring underground interesting.
+Adds 21+ new rock types and replaces underground stone with realistic strata.
+The stone-replacer world generation engine (formerly the separate Hyle mod) is now built in.
+'''
+
+[[dependencies.unearthed]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.unearthed]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.21.2)"
+    ordering="NONE"
+    side="BOTH"
+
+# --- Optional compatibility: load after terrain/biome mods so our biome modifier
+# --- sees their biomes, and after JEI/Create for clean integration.
+[[dependencies.unearthed]]
+    modId="tectonic"
+    type="optional"
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.unearthed]]
+    modId="biomesoplenty"
+    type="optional"
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.unearthed]]
+    modId="biomeswevegone"
+    type="optional"
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.unearthed]]
+    modId="create"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.unearthed]]
+    modId="jei"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config="unearthed.mixins.json"
