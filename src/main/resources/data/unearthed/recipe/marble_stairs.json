@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:marble_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:marble_stairs"
   }
 }

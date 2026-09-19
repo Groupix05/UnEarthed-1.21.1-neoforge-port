@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:phyllite_bricks",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:phyllite_bricks"
   }
 }

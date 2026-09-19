@@ -3,7 +3,9 @@
   "ingredient": {
     "tag": "unearthed:redstone_ores"
   },
-  "result": "minecraft:redstone",
+  "result": {
+    "id": "minecraft:redstone"
+  },
   "experience": 0.7,
   "cookingtime": 200
 }

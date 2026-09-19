@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:siltstone_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:siltstone_stairs"
   }
 }

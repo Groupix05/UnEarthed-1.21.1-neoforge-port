@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:dolerite"
   },
-  "result": "unearthed:dolerite_slab",
+  "result": {
+    "id": "unearthed:dolerite_slab"
+  },
   "count": 2
 }

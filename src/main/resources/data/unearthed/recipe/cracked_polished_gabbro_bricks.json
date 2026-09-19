@@ -3,7 +3,9 @@
   "ingredient": {
     "item": "unearthed:polished_gabbro_bricks"
   },
-  "result": "unearthed:cracked_polished_gabbro_bricks",
+  "result": {
+    "id": "unearthed:cracked_polished_gabbro_bricks"
+  },
   "experience": 0.1,
   "cookingtime": 200
 }

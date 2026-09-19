@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:white_granite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:white_granite_wall"
   }
 }

@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:conglomerate_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:conglomerate_wall"
   }
 }

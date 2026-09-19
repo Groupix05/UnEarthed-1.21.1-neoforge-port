@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "unearthed:gabbro",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:gabbro"
   }
 }

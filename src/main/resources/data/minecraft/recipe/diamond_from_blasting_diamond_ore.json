@@ -3,7 +3,9 @@
   "ingredient": {
     "tag": "unearthed:diamond_ores"
   },
-  "result": "minecraft:diamond",
-  "experience": 1.0,
+  "result": {
+    "id": "minecraft:diamond"
+  },
+  "experience": 1,
   "cookingtime": 100
 }

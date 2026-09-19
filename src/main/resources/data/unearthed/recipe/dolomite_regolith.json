@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:dolomite_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:dolomite_regolith"
   }
 }

@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:pumice_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:pumice_wall"
   }
 }

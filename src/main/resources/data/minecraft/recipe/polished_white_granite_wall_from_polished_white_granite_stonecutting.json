@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:polished_white_granite"
   },
-  "result": "unearthed:polished_white_granite_wall",
+  "result": {
+    "id": "unearthed:polished_white_granite_wall"
+  },
   "count": 1
 }

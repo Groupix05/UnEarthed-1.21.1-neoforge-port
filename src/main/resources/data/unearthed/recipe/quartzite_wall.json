@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:quartzite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:quartzite_wall"
   }
 }

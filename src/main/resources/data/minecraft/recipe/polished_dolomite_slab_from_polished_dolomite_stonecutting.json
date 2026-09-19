@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:polished_dolomite"
   },
-  "result": "unearthed:polished_dolomite_slab",
+  "result": {
+    "id": "unearthed:polished_dolomite_slab"
+  },
   "count": 2
 }

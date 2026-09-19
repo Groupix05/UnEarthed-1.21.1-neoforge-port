@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:pumice"
   },
-  "result": "unearthed:pumice_stairs",
+  "result": {
+    "id": "unearthed:pumice_stairs"
+  },
   "count": 1
 }

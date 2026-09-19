@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:dolomite"
   },
-  "result": "unearthed:dolomite_wall",
+  "result": {
+    "id": "unearthed:dolomite_wall"
+  },
   "count": 1
 }

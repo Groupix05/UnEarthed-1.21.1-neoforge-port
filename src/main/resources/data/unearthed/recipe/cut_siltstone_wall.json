@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cut_siltstone_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:cut_siltstone_wall"
   }
 }

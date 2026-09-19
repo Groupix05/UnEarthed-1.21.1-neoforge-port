@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:dolomite_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:dolomite_stairs"
   }
 }

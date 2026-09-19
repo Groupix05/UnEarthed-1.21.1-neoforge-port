@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:quartzite"
   },
-  "result": "unearthed:quartzite_slab",
+  "result": {
+    "id": "unearthed:quartzite_slab"
+  },
   "count": 2
 }

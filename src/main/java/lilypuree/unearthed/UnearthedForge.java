@@ -2,6 +2,7 @@ package lilypuree.unearthed;
 
 import lilypuree.unearthed.compat.projecte.ProjectECompat;
 import lilypuree.unearthed.core.Registration;
+import lilypuree.unearthed.core.UEConditions;
 import lilypuree.unearthed.worldgen.WorldgenSetup;
 import lilypuree.unearthed.worldgen.core.WorldgenFeatures;
 import lilypuree.unearthed.worldgen.misc.WorldgenDataLoaders;
@@ -22,6 +23,7 @@ public class UnearthedForge {
         CommonSetup.init();
         Constants.CONFIG = new UEForgeConfigs();
         container.registerConfig(ModConfig.Type.COMMON, UEForgeConfigs.COMMON_CONFIG);
+        UEConditions.init(modbus);
         Registration.init(modbus);
         Registration.registerLootConditions(modbus);
         modbus.addListener(this::commonSetup);

@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:weathered_rhyolite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:weathered_rhyolite_slab"
   }
 }

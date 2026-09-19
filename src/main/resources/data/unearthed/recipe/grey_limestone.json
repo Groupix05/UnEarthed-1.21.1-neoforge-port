@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "unearthed:grey_limestone",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:grey_limestone"
   }
 }

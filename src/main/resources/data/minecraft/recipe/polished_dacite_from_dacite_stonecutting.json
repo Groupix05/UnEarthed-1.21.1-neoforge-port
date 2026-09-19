@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:dacite"
   },
-  "result": "unearthed:polished_dacite",
+  "result": {
+    "id": "unearthed:polished_dacite"
+  },
   "count": 1
 }

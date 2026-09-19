@@ -16,8 +16,8 @@
       "unearthed:granodiorite",
       "unearthed:phyllite"
     ],
-    "base": "unearthed:limestone",
-    "deep": "unearthed:granodiorite",
+    "base": "",
+    "deep": "unearthed:slate",
     "high_bound": -0.7,
     "strata_bound": 0.1,
     "deep_bound": 0.5,
@@ -31,7 +31,7 @@
       "unearthed:granodiorite"
     ],
     "base": "",
-    "deep": "",
+    "deep": "unearthed:slate",
     "top_layer_thickness": 50,
     "deep_layer_depth": 100
   },

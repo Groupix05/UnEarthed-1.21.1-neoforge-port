@@ -11,6 +11,7 @@ public class UEForgeConfigs implements CommonConfig {
     private ModConfigSpec.BooleanValue disableCobbleReplacement;
     private ModConfigSpec.BooleanValue disableDirtReplacement;
     private ModConfigSpec.BooleanValue disableOreReplacement;
+    private ModConfigSpec.BooleanValue enableCreateAndesiteReserve;
 
     public UEForgeConfigs() {
         ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
@@ -26,6 +27,11 @@ public class UEForgeConfigs implements CommonConfig {
         disableCobbleReplacement = COMMON_BUILDER.define("disable_cobble", false);
         disableDirtReplacement = COMMON_BUILDER.define("disable_dirt", false);
         disableOreReplacement = COMMON_BUILDER.define("disable_ore", false);
+        COMMON_BUILDER.pop();
+
+        COMMON_BUILDER.push("compatibility");
+        enableCreateAndesiteReserve = COMMON_BUILDER.comment("Generates vanilla andesite at vanilla gravel frequency when Create is installed.")
+                .define("enable_create_andesite_reserve", true);
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();
@@ -59,5 +65,10 @@ public class UEForgeConfigs implements CommonConfig {
     @Override
     public boolean disableOreReplacement() {
         return disableOreReplacement.get();
+    }
+
+    @Override
+    public boolean enableCreateAndesiteReserve() {
+        return enableCreateAndesiteReserve.get();
     }
 }

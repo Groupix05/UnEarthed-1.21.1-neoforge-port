@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cut_mudstone_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:cut_mudstone_wall"
   }
 }

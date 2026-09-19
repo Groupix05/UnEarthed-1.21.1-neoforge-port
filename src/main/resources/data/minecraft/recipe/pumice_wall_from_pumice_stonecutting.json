@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:pumice"
   },
-  "result": "unearthed:pumice_wall",
+  "result": {
+    "id": "unearthed:pumice_wall"
+  },
   "count": 1
 }

@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:dolomite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:dolomite_wall"
   }
 }

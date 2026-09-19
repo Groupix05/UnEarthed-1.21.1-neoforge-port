@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:mossy_cobbled_slate_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:mossy_cobbled_slate_slab"
   }
 }

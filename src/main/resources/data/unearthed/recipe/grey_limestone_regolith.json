@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:grey_limestone_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:grey_limestone_regolith"
   }
 }

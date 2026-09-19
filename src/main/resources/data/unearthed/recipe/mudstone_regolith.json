@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:mudstone_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:mudstone_regolith"
   }
 }

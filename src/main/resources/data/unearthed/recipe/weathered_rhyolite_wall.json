@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:weathered_rhyolite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:weathered_rhyolite_wall"
   }
 }

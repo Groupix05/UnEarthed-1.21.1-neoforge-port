@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cut_mudstone",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:cut_mudstone"
   }
 }

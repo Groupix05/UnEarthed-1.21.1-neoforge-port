@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:slate_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:slate_wall"
   }
 }

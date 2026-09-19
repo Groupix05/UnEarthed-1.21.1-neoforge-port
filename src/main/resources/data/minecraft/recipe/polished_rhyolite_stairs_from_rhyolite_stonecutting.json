@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:rhyolite"
   },
-  "result": "unearthed:polished_rhyolite_stairs",
+  "result": {
+    "id": "unearthed:polished_rhyolite_stairs"
+  },
   "count": 1
 }

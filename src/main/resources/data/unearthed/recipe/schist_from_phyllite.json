@@ -3,7 +3,9 @@
   "ingredient": {
     "item": "unearthed:phyllite"
   },
-  "result": "unearthed:schist",
+  "result": {
+    "id": "unearthed:schist"
+  },
   "experience": 0.1,
   "cookingtime": 200
 }

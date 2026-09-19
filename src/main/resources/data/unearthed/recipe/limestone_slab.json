@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:limestone_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:limestone_slab"
   }
 }

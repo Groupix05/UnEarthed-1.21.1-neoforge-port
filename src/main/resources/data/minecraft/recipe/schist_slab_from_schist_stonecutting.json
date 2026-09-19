@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:schist"
   },
-  "result": "unearthed:schist_slab",
+  "result": {
+    "id": "unearthed:schist_slab"
+  },
   "count": 2
 }

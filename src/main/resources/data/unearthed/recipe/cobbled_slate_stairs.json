@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cobbled_slate_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:cobbled_slate_stairs"
   }
 }

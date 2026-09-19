@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "unearthed:granodiorite",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:granodiorite"
   }
 }

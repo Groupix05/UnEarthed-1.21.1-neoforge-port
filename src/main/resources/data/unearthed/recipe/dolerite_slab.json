@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:dolerite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:dolerite_slab"
   }
 }

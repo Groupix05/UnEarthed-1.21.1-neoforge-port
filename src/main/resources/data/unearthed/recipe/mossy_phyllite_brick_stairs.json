@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:mossy_phyllite_brick_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:mossy_phyllite_brick_stairs"
   }
 }

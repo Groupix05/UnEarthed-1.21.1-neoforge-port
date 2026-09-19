@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:kimberlite_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:kimberlite_regolith"
   }
 }

@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:granodiorite"
   },
-  "result": "unearthed:granodiorite_slab",
+  "result": {
+    "id": "unearthed:granodiorite_slab"
+  },
   "count": 2
 }

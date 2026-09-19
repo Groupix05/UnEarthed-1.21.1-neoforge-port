@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:dolerite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:dolerite_wall"
   }
 }

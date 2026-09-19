@@ -16,7 +16,6 @@ import java.util.Optional;
 import java.util.Set;
 
 public class StoneReplacerConfiguration implements FeatureConfiguration {
-
     public static final Codec<StoneReplacerConfiguration> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             BiomeBasedReplacer.CODEC.listOf().optionalFieldOf("biome_replacers", List.of()).forGetter(StoneReplacerConfiguration::biomeBasedReplacers),
             ResourceLocation.CODEC.listOf().fieldOf("regions").forGetter(StoneReplacerConfiguration::regions),

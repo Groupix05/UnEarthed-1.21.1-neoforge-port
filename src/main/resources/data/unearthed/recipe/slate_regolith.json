@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:slate_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:slate_regolith"
   }
 }

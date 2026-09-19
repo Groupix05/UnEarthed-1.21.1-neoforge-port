@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:sandstone_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:sandstone_regolith"
   }
 }

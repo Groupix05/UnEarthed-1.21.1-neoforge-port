@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:slate"
   },
-  "result": "unearthed:slate_slab",
+  "result": {
+    "id": "unearthed:slate_slab"
+  },
   "count": 2
 }

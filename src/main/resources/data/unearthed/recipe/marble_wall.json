@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:marble_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:marble_wall"
   }
 }

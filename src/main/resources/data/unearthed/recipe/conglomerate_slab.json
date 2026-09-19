@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:conglomerate_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:conglomerate_slab"
   }
 }

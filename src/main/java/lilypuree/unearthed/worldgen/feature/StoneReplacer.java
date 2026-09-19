@@ -2,8 +2,10 @@ package lilypuree.unearthed.worldgen.feature;
 
 import lilypuree.unearthed.Constants;
 import lilypuree.unearthed.mixin.server.NoiseBasedChunkGeneratorAccessor;
+import lilypuree.unearthed.worldgen.core.WorldgenTags;
 import lilypuree.unearthed.worldgen.feature.gen.*;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,8 +15,21 @@ import net.minecraft.world.level.chunk.LevelChunkSection;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.neoforged.fml.ModList;
+
+import java.util.List;
 
 public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
+    private static final int CREATE_ANDESITE_VEINS_PER_CHUNK = 14;
+    private static final int CREATE_ANDESITE_VEIN_SIZE = 33;
+    private static final OreConfiguration CREATE_ANDESITE_CONFIGURATION = new OreConfiguration(
+            List.of(OreConfiguration.target(new TagMatchTest(WorldgenTags.Blocks.CREATE_ANDESITE_REPLACEABLE), Blocks.ANDESITE.defaultBlockState())),
+            CREATE_ANDESITE_VEIN_SIZE,
+            0.0F
+    );
+
     public StoneReplacer() {
         super(StoneReplacerConfiguration.CODEC);
     }
@@ -30,7 +45,7 @@ public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
 
     @Override
     public boolean place(FeaturePlaceContext<StoneReplacerConfiguration> ctx) {
-        if (!canReplace(ctx.chunkGenerator())) return false;
+        if (Constants.CONFIG.disableReplacement() || !canReplace(ctx.chunkGenerator())) return false;
         WorldGenLevel level = ctx.level();
         StoneReplacerConfiguration config = ctx.config();
         if (!isSeedSet) {
@@ -70,7 +85,31 @@ public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
             filler.fillInCentersRandom(1);
         }
         replaceAll(chunkAccess, minY, noiseHolder.getHeights(), filler.results());
+        if (shouldGenerateCreateAndesite()) {
+            generateCreateAndesite(ctx);
+        }
         return true;
+    }
+
+    private static boolean shouldGenerateCreateAndesite() {
+        return Constants.CONFIG.enableCreateAndesiteReserve() && ModList.get().isLoaded("create");
+    }
+
+    private static void generateCreateAndesite(FeaturePlaceContext<StoneReplacerConfiguration> ctx) {
+        WorldGenLevel level = ctx.level();
+        RandomSource random = ctx.random();
+        int minY = level.getMinBuildHeight();
+        int height = level.getMaxBuildHeight() - minY;
+        BlockPos origin = ctx.origin();
+
+        for (int vein = 0; vein < CREATE_ANDESITE_VEINS_PER_CHUNK; vein++) {
+            BlockPos veinOrigin = new BlockPos(
+                    origin.getX() + random.nextInt(16),
+                    minY + random.nextInt(height),
+                    origin.getZ() + random.nextInt(16)
+            );
+            Feature.ORE.place(CREATE_ANDESITE_CONFIGURATION, level, ctx.chunkGenerator(), random, veinOrigin);
+        }
     }
 
     BlockPos basePos;

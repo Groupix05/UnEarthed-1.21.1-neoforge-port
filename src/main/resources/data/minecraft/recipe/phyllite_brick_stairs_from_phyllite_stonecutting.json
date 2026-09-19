@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:phyllite"
   },
-  "result": "unearthed:phyllite_brick_stairs",
+  "result": {
+    "id": "unearthed:phyllite_brick_stairs"
+  },
   "count": 1
 }

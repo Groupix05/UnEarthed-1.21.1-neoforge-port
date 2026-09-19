@@ -8,4 +8,5 @@ public interface CommonConfig {
     boolean disableCobbleReplacement();
     boolean disableDirtReplacement();
     boolean disableOreReplacement();
+    boolean enableCreateAndesiteReserve();
 }

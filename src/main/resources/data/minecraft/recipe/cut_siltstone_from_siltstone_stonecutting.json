@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:siltstone"
   },
-  "result": "unearthed:cut_siltstone",
+  "result": {
+    "id": "unearthed:cut_siltstone"
+  },
   "count": 1
 }

@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:polished_granodiorite",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:polished_granodiorite"
   }
 }

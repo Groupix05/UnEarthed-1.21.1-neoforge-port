@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:quartzite_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:quartzite_regolith"
   }
 }

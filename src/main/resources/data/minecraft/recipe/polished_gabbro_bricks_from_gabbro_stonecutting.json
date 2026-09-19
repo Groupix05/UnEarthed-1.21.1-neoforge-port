@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:gabbro"
   },
-  "result": "unearthed:polished_gabbro_bricks",
+  "result": {
+    "id": "unearthed:polished_gabbro_bricks"
+  },
   "count": 1
 }

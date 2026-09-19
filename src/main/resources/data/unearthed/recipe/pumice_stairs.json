@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "unearthed:pumice_stairs",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:pumice_stairs"
   }
 }

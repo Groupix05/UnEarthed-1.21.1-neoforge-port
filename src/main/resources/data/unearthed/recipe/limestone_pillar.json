@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:limestone_pillar",
-    "count": 2
+    "count": 2,
+    "id": "unearthed:limestone_pillar"
   }
 }

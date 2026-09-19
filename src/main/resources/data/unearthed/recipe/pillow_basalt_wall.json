@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:pillow_basalt_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:pillow_basalt_wall"
   }
 }

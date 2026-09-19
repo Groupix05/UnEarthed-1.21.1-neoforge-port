@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:white_granite"
   },
-  "result": "unearthed:white_granite_slab",
+  "result": {
+    "id": "unearthed:white_granite_slab"
+  },
   "count": 2
 }

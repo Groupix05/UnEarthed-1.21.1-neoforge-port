@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:mossy_slate_bricks"
   },
-  "result": "unearthed:mossy_slate_brick_wall",
+  "result": {
+    "id": "unearthed:mossy_slate_brick_wall"
+  },
   "count": 1
 }

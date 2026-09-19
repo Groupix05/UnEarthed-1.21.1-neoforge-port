@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:quartzite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:quartzite_slab"
   }
 }

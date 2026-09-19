@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:mossy_cobbled_phyllite"
   },
-  "result": "unearthed:mossy_cobbled_phyllite_wall",
+  "result": {
+    "id": "unearthed:mossy_cobbled_phyllite_wall"
+  },
   "count": 1
 }

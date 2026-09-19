@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cobbled_beige_limestone_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:cobbled_beige_limestone_wall"
   }
 }

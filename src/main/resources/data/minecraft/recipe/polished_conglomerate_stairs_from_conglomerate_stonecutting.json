@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:conglomerate"
   },
-  "result": "unearthed:polished_conglomerate_stairs",
+  "result": {
+    "id": "unearthed:polished_conglomerate_stairs"
+  },
   "count": 1
 }

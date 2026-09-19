@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:kimberlite"
   },
-  "result": "unearthed:kimberlite_wall",
+  "result": {
+    "id": "unearthed:kimberlite_wall"
+  },
   "count": 1
 }

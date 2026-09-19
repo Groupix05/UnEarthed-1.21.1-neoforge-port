@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:gabbro_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:gabbro_regolith"
   }
 }

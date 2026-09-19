@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:polished_granodiorite"
   },
-  "result": "unearthed:polished_granodiorite_stairs",
+  "result": {
+    "id": "unearthed:polished_granodiorite_stairs"
+  },
   "count": 1
 }

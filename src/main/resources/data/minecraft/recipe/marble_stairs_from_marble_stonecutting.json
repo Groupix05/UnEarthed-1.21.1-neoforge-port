@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:marble"
   },
-  "result": "unearthed:marble_stairs",
+  "result": {
+    "id": "unearthed:marble_stairs"
+  },
   "count": 1
 }

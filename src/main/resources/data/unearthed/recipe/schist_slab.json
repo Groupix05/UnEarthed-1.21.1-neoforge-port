@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:schist_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:schist_slab"
   }
 }

@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:white_granite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:white_granite_slab"
   }
 }

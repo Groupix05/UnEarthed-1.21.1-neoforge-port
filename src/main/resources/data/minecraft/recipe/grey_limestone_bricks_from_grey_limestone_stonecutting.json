@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:grey_limestone"
   },
-  "result": "unearthed:grey_limestone_bricks",
+  "result": {
+    "id": "unearthed:grey_limestone_bricks"
+  },
   "count": 1
 }

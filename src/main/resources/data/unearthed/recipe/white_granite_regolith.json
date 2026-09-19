@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:white_granite_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:white_granite_regolith"
   }
 }

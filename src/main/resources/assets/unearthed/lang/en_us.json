@@ -522,5 +522,16 @@
   "item.unearthed.regolith": "Regolith",
   "itemGroup.unearthed.general": "Unearthed",
   "block.unearthed.diorite_copper_ore": "Diorite Copper Ore",
-  "block.unearthed.granite_copper_ore": "Granite Copper Ore"
+  "block.unearthed.granite_copper_ore": "Granite Copper Ore",
+  "config.unearthed.title": "Unearthed Settings",
+  "config.unearthed.general_settings": "General Settings",
+  "config.unearthed.generation_settings": "Generation Settings",
+  "config.unearthed.compatibility": "Compatibility",
+  "config.unearthed.enable_regolith_to_dirt_recipe": "Enable Regolith-to-Dirt Recipe",
+  "config.unearthed.enable_debug": "Enable Debug World Generation",
+  "config.unearthed.disable_all": "Disable All Stone Replacement",
+  "config.unearthed.disable_cobble": "Disable Cobblestone Replacement",
+  "config.unearthed.disable_dirt": "Disable Dirt Replacement",
+  "config.unearthed.disable_ore": "Disable Ore Replacement",
+  "config.unearthed.enable_create_andesite_reserve": "Reserve Vanilla Andesite for Create"
 }

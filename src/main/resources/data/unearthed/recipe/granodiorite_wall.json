@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:granodiorite_wall",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:granodiorite_wall"
   }
 }

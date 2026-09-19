@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:mossy_cobbled_slate"
   },
-  "result": "unearthed:mossy_cobbled_slate_stairs",
+  "result": {
+    "id": "unearthed:mossy_cobbled_slate_stairs"
+  },
   "count": 1
 }

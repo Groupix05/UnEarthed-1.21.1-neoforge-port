@@ -14,7 +14,7 @@
     ]
   },
   "result": {
-    "item": "unearthed:siltstone_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:siltstone_slab"
   }
 }

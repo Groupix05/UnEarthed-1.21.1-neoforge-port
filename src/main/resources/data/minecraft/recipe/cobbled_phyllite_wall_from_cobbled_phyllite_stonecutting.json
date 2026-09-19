@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:cobbled_phyllite"
   },
-  "result": "unearthed:cobbled_phyllite_wall",
+  "result": {
+    "id": "unearthed:cobbled_phyllite_wall"
+  },
   "count": 1
 }

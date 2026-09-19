@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:lignite"
   },
-  "result": "unearthed:lignite_wall",
+  "result": {
+    "id": "unearthed:lignite_wall"
+  },
   "count": 1
 }

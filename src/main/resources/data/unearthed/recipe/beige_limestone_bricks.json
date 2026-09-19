@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "unearthed:beige_limestone_bricks",
-    "count": 4
+    "count": 4,
+    "id": "unearthed:beige_limestone_bricks"
   }
 }

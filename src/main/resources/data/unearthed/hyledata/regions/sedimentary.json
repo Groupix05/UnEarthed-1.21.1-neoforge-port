@@ -11,8 +11,8 @@
       "unearthed:grey_limestone",
       "unearthed:grey_limestone"
     ],
-    "base": "unearthed:grey_limestone",
-    "deep": "unearthed:gabbro",
+    "base": "",
+    "deep": "unearthed:slate",
     "high_bound": -0.7,
     "strata_bound": 0.1,
     "deep_bound": 0.5,
@@ -27,7 +27,7 @@
       "unearthed:rhyolite"
     ],
     "base": "",
-    "deep": "",
+    "deep": "unearthed:slate",
     "top_layer_thickness": 50,
     "deep_layer_depth": 100
   },

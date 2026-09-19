@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:granodiorite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:granodiorite_slab"
   }
 }

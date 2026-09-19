@@ -22,3 +22,11 @@
 <h5>Conglomerate</h5>
 </div>
 <p>&nbsp;</p>
+
+<h2>NeoForge 1.21.1 port notes</h2>
+<ul>
+<li>The port updates all bundled recipes to the Minecraft 1.21.1 recipe result format.</li>
+<li>When Create is installed, <code>enable_create_andesite_reserve</code> is enabled by default. It generates vanilla andesite with the same 14 veins of size 33 per chunk and height range as vanilla gravel. Set it to <code>false</code> in <code>config/unearthed-common.toml</code> to disable this compatibility generation.</li>
+<li><code>enable_regolith_to_dirt_recipe</code> now correctly controls the regolith-to-dirt crafting recipe.</li>
+<li>Included languages: English (US and UK), Russian, Ukrainian, Simplified Chinese, German, Spanish (Spain and Mexico), Brazilian Portuguese, French, Polish, Japanese, Korean, and Turkish.</li>
+</ul>

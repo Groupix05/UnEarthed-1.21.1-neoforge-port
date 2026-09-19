@@ -3,7 +3,9 @@
   "ingredient": {
     "tag": "unearthed:emerald_ores"
   },
-  "result": "minecraft:emerald",
-  "experience": 1.0,
+  "result": {
+    "id": "minecraft:emerald"
+  },
+  "experience": 1,
   "cookingtime": 100
 }

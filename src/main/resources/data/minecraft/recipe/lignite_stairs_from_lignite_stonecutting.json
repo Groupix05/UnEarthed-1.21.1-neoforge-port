@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:lignite"
   },
-  "result": "unearthed:lignite_stairs",
+  "result": {
+    "id": "unearthed:lignite_stairs"
+  },
   "count": 1
 }

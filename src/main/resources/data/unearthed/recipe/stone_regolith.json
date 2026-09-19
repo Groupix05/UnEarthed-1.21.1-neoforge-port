@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "unearthed:stone_regolith",
-    "count": 8
+    "count": 8,
+    "id": "unearthed:stone_regolith"
   }
 }

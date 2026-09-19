@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "unearthed:mudstone"
   },
-  "result": "unearthed:mudstone_wall",
+  "result": {
+    "id": "unearthed:mudstone_wall"
+  },
   "count": 1
 }

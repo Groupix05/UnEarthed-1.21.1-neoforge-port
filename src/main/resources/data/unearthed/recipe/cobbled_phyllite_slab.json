@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "unearthed:cobbled_phyllite_slab",
-    "count": 6
+    "count": 6,
+    "id": "unearthed:cobbled_phyllite_slab"
   }
 }
