@@ -1,6 +1,7 @@
 {
   "type": "unearthed:deepslate_replacer",
   "config": {
+    "max_y": -1,
     "frequencies": {
       "region": 0.0006,
       "unconformity": 0.0023,

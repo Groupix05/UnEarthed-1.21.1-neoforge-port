@@ -6,7 +6,7 @@
       "height": {
         "type": "constant",
         "value": {
-          "absolute": -8
+          "absolute": 0
         }
       }
     }

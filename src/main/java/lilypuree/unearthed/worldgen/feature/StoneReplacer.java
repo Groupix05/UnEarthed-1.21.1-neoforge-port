@@ -63,7 +63,7 @@ public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
         int minY = Math.max(pos.getY(), level.getMinBuildHeight());
         ChunkAccess chunkAccess = level.getChunk(pos);
         NoiseHolder noiseHolder = new NoiseHolder(config, level, pos.getX(), minY, pos.getZ());
-        int maxHeight = noiseHolder.getMaxHeight(chunkAccess);
+        int maxHeight = Math.min(noiseHolder.getMaxHeight(chunkAccess), config.getMaxY());
         if (maxHeight <= minY) return false;
         ChunkFiller filler = new ChunkFiller(level.getSeed(), new BlockPos(pos.getX(), minY, pos.getZ()), maxHeight - minY + 1);
         if (Constants.CONFIG.enableDebug()) {
@@ -84,7 +84,7 @@ public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
             filler.fillInEdgesAndFaces(1);
             filler.fillInCentersRandom(1);
         }
-        replaceAll(chunkAccess, minY, noiseHolder.getHeights(), filler.results());
+        replaceAll(chunkAccess, minY, maxHeight, noiseHolder.getHeights(), filler.results());
         if (shouldGenerateCreateAndesite()) {
             generateCreateAndesite(ctx);
         }
@@ -114,12 +114,12 @@ public class StoneReplacer extends Feature<StoneReplacerConfiguration> {
 
     BlockPos basePos;
 
-    private void replaceAll(ChunkAccess chunkAccess, int minY, int[][] heights, StoneType[][][] results) {
+    private void replaceAll(ChunkAccess chunkAccess, int minY, int maxY, int[][] heights, StoneType[][][] results) {
         int currentSectionIndex = chunkAccess.getSectionIndex(minY);
         LevelChunkSection chunkSection = chunkAccess.getSection(currentSectionIndex);
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                int height = heights[x][z];
+                int height = Math.min(heights[x][z], maxY);
                 for (int posY = minY; posY <= height; posY++) {
                     int sectionIndex = chunkAccess.getSectionIndex(posY);
                     if (currentSectionIndex != sectionIndex) {

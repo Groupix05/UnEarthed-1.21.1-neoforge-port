@@ -19,18 +19,21 @@ public class StoneReplacerConfiguration implements FeatureConfiguration {
     public static final Codec<StoneReplacerConfiguration> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             BiomeBasedReplacer.CODEC.listOf().optionalFieldOf("biome_replacers", List.of()).forGetter(StoneReplacerConfiguration::biomeBasedReplacers),
             ResourceLocation.CODEC.listOf().fieldOf("regions").forGetter(StoneReplacerConfiguration::regions),
-            Frequencies.CODEC.fieldOf("frequencies").forGetter(StoneReplacerConfiguration::frequencies)
+            Frequencies.CODEC.fieldOf("frequencies").forGetter(StoneReplacerConfiguration::frequencies),
+            Codec.INT.optionalFieldOf("max_y", Integer.MAX_VALUE).forGetter(StoneReplacerConfiguration::maxY)
     ).apply(instance, StoneReplacerConfiguration::new));
 
-    public StoneReplacerConfiguration(List<BiomeBasedReplacer> biomeBasedReplacers, List<ResourceLocation> regions, Frequencies frequencies) {
+    public StoneReplacerConfiguration(List<BiomeBasedReplacer> biomeBasedReplacers, List<ResourceLocation> regions, Frequencies frequencies, int maxY) {
         this.biomeBasedReplacers = biomeBasedReplacers;
         this.regions = regions;
         this.frequencies = frequencies;
+        this.maxY = maxY;
     }
 
     private final List<BiomeBasedReplacer> biomeBasedReplacers;
     private final List<ResourceLocation> regions;
     private final Frequencies frequencies;
+    private final int maxY;
 
     private List<BiomeBasedReplacer> biomeBasedReplacers() {
         return biomeBasedReplacers;
@@ -42,6 +45,10 @@ public class StoneReplacerConfiguration implements FeatureConfiguration {
 
     private Frequencies frequencies() {
         return frequencies;
+    }
+
+    private int maxY() {
+        return maxY;
     }
 
     public record Frequencies(float region, float unconformity, float primary, float secondary, float tertiary) {
@@ -65,6 +72,10 @@ public class StoneReplacerConfiguration implements FeatureConfiguration {
 
     public Frequencies getFrequencies() {
         return frequencies;
+    }
+
+    public int getMaxY() {
+        return maxY;
     }
 
     private Set<ResourceLocation> missingRegions = new HashSet<>();
