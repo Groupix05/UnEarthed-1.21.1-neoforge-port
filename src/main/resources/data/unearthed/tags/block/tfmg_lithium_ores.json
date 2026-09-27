@@ -1,0 +1,97 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "unearthed:phyllite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:slate_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:gabbro_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:granodiorite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:rhyolite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:white_granite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:beige_limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:grey_limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:siltstone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:mudstone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:conglomerate_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:dark_slate_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_beige_limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_grey_limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_limestone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_phyllite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_conglomerate_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_gabbro_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_granodiorite_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_mudstone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_siltstone_lithium_ore",
+      "required": false
+    },
+    {
+      "id": "unearthed:deep_white_granite_lithium_ore",
+      "required": false
+    }
+  ]
+}

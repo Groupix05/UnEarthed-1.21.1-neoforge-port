@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:base_stone_overworld",
+    "#unearthed:igneous",
+    "#unearthed:metamorphic",
+    "#unearthed:sedimentary"
+  ]
+}

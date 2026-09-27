@@ -38,6 +38,10 @@ public class Forms {
     public static class OreForm extends BlockForm {
         private IOreType oreType;
 
+        public OreForm(String name) {
+            this(name, null);
+        }
+
         public OreForm(String name, IOreType oreType) {
             super(name);
             this.oreType = oreType;
@@ -88,6 +92,11 @@ public class Forms {
     public static final BlockForm LAPIS_ORE = new OreForm("lapis_ore", VanillaOreTypes.LAPIS);
     public static final BlockForm DIAMOND_ORE = new OreForm("diamond_ore", VanillaOreTypes.DIAMOND);
     public static final BlockForm EMERALD_ORE = new OreForm("emerald_ore", VanillaOreTypes.EMERALD);
+    public static final BlockForm ZINC_ORE = new OreForm("zinc_ore");
+    public static final BlockForm LEAD_ORE = new OreForm("lead_ore");
+    public static final BlockForm LITHIUM_ORE = new OreForm("lithium_ore");
+    public static final BlockForm NICKEL_ORE = new OreForm("nickel_ore");
+    public static final BlockForm PLATINUM_ORE = new OreForm("platinum_ore");
 
 
     public static final BlockForm KIMBERLITE_DIAMOND_ORE = new OreForm("diamond_ore", VanillaOreTypes.DIAMOND);

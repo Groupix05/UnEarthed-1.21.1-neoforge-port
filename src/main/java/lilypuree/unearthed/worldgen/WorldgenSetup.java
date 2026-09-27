@@ -1,6 +1,9 @@
 package lilypuree.unearthed.worldgen;
 
 import lilypuree.unearthed.worldgen.core.WorldgenTags;
+import lilypuree.unearthed.worldgen.compat.CreateCompat;
+import lilypuree.unearthed.worldgen.compat.CreatePropulsionCompat;
+import lilypuree.unearthed.worldgen.compat.TFMGCompat;
 import lilypuree.unearthed.worldgen.feature.gen.StoneType;
 import lilypuree.unearthed.worldgen.misc.StoneTypeCodecJsonDataManager;
 import lilypuree.unearthed.worldgen.misc.WorldgenDataLoaders;
@@ -16,7 +19,9 @@ public final class WorldgenSetup {
         WorldgenDataLoaders.init(new StoneTypeCodecJsonDataManager() {
             @Override
             public boolean fireEvent(StoneType stoneType) {
-                // No external mod-compat event bus needed now that this is self-contained.
+                CreateCompat.addOreReplacements(stoneType);
+                CreatePropulsionCompat.addOreReplacements(stoneType);
+                TFMGCompat.addOreReplacements(stoneType);
                 return true;
             }
         });

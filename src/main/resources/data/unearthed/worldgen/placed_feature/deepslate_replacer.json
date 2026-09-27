@@ -1,0 +1,14 @@
+{
+  "feature": "unearthed:deepslate_replacer",
+  "placement": [
+    {
+      "type": "height_range",
+      "height": {
+        "type": "constant",
+        "value": {
+          "above_bottom": 0
+        }
+      }
+    }
+  ]
+}

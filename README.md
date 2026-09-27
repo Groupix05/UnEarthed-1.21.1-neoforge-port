@@ -23,10 +23,14 @@
 </div>
 <p>&nbsp;</p>
 
-<h2>NeoForge 1.21.1 port notes</h2>
+<h2>Port Features</h2>
 <ul>
-<li>The port updates all bundled recipes to the Minecraft 1.21.1 recipe result format.</li>
-<li>When Create is installed, <code>enable_create_andesite_reserve</code> is enabled by default. It generates vanilla andesite with the same 14 veins of size 33 per chunk and height range as vanilla gravel. Set it to <code>false</code> in <code>config/unearthed-common.toml</code> to disable this compatibility generation.</li>
-<li><code>enable_regolith_to_dirt_recipe</code> now correctly controls the regolith-to-dirt crafting recipe.</li>
+<li>Hyle's stone-replacement system is integrated directly into Unearthed, so no separate Hyle installation is required.</li>
+<li>World generation is updated for NeoForge 1.21.1, including deep rocks and their ore variants below <code>Y=-1</code>.</li>
+<li>All bundled crafting, smelting, blasting, and stonecutting recipes use the Minecraft 1.21.1 recipe format.</li>
+<li>Optional Create compatibility adds vanilla andesite at vanilla gravel frequency: 14 veins of size 33 per chunk across the normal gravel height range. It also generates Create zinc ore as matching variants in Unearthed's ore-bearing rocks while preserving Create drops, smelting, and crushing. Set <code>enable_create_andesite_reserve=false</code> in <code>config/unearthed-common.toml</code> to disable the andesite reserve.</li>
+<li>Optional Create: The Factory Must Grow compatibility generates matching Unearthed variants for TFMG lead, lithium, and nickel ores while preserving their generation, drops, tool requirements, and processing. Lithium also retains TFMG's crushing outputs.</li>
+<li>Optional Create Propulsion: Simulated compatibility generates matching Unearthed variants for platinum ore while preserving its four world-generation profiles, iron-tool requirement, drops, smelting, blasting, and Create crushing outputs.</li>
+<li>Fixed config options for disabling stone replacement and for the regolith-to-dirt recipe.</li>
 <li>Included languages: English (US and UK), Russian, Ukrainian, Simplified Chinese, German, Spanish (Spain and Mexico), Brazilian Portuguese, French, Polish, Japanese, Korean, and Turkish.</li>
 </ul>

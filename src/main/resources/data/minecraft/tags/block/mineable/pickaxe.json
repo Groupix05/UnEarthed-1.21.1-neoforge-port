@@ -415,6 +415,11 @@
     "unearthed:deep_siltstone",
     "unearthed:deep_weathered_rhyolite",
     "unearthed:deep_white_granite",
-    "unearthed:cobbled_deepslate"
+    "unearthed:cobbled_deepslate",
+    "#unearthed:create_zinc_ores",
+    "#unearthed:tfmg_lead_ores",
+    "#unearthed:tfmg_lithium_ores",
+    "#unearthed:tfmg_nickel_ores",
+    "#unearthed:createpropulsion_platinum_ores"
   ]
 }

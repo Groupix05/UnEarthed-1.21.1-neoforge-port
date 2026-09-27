@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createpropulsion"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "unearthed:mudstone_platinum_ore"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:crushed_raw_platinum"
+    },
+    {
+      "chance": 0.75,
+      "count": 4,
+      "id": "create:experience_nugget"
+    }
+  ],
+  "processingTime": 250
+}

@@ -36,6 +36,11 @@ public class Variants {
     public static BlockVariant PILLAR_BLOCK;
 
     public static BlockVariant DEEP_ORES;
+    public static BlockVariant CREATE_ZINC_ORE;
+    public static BlockVariant TFMG_LEAD_ORE;
+    public static BlockVariant TFMG_LITHIUM_ORE;
+    public static BlockVariant TFMG_NICKEL_ORE;
+    public static BlockVariant CREATE_PROPULSION_PLATINUM_ORE;
 
     public static BlockVariant REGOLITHS;
     public static BlockVariant SANDSTONE;
@@ -114,6 +119,11 @@ public class Variants {
         SANDSTONE = new BlockVariant("", sandstone).sideTop();
 
         DEEP_ORES = new BlockVariant("", Lists.newArrayList(Forms.BLOCK, Forms.IRON_ORE, Forms.COAL_ORE, Forms.COPPER_ORE, Forms.GOLD_ORE, Forms.LAPIS_ORE, Forms.REDSTONE_ORE, Forms.DIAMOND_ORE, Forms.EMERALD_ORE));
+        CREATE_ZINC_ORE = new BlockVariant("", Forms.ZINC_ORE);
+        TFMG_LEAD_ORE = new BlockVariant("", Forms.LEAD_ORE);
+        TFMG_LITHIUM_ORE = new BlockVariant("", Forms.LITHIUM_ORE);
+        TFMG_NICKEL_ORE = new BlockVariant("", Forms.NICKEL_ORE);
+        CREATE_PROPULSION_PLATINUM_ORE = new BlockVariant("", Forms.PLATINUM_ORE);
         OVERGROWN = new BlockVariant("overgrown", Forms.OVERGROWN_ROCK);
         REGOLITHS = new BlockVariant("", regoliths);
 

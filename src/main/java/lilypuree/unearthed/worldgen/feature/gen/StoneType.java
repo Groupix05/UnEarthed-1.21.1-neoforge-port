@@ -156,6 +156,10 @@ public class StoneType implements IStoneType {
         return oreMap;
     }
 
+    public void addOreReplacement(Block source, BlockState replacement) {
+        oreMap.put(source, replacement);
+    }
+
     public BlockState replace(BlockState original) {
         if (original.is(WorldgenTags.Blocks.REPLACABLE)) {
             return baseBlock;

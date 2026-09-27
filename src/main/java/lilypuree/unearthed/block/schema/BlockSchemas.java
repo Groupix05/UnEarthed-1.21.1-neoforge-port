@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.neoforged.fml.ModList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,19 +95,19 @@ public class BlockSchemas {
         List<BlockVariant> vanilla_like = create(ALL_BLOCKS_NO_ORES);
         List<BlockVariant> intrusive = create(Variants.VANILLA, OVERGROWN);
 
-        PHYLLITE = register("phyllite", stone_like);
-        SLATE = register("slate", stone_like);
+        PHYLLITE = register("phyllite", withOptionalModdedOres(stone_like));
+        SLATE = register("slate", withOptionalModdedOres(stone_like));
 
-        GABBRO = register("gabbro", blackstone_like);
-        GRANODIORITE = register("granodiorite", blackstone_like);
-        RHYOLITE = register("rhyolite", blackstone_like);
-        WHITE_GRANITE = register("white_granite", blackstone_like);
-        LIMESTONE = register("limestone", limestone);
-        BEIGE_LIMESTONE = register("beige_limestone", beige_limestone);
-        GREY_LIMESTONE = register("grey_limestone", limestone);
-        SILTSTONE = registerSand("siltstone", sandstone_like);
-        MUDSTONE = registerSand("mudstone", mudstone);
-        CONGLOMERATE = registerSand("conglomerate", secondary);
+        GABBRO = register("gabbro", withOptionalModdedOres(blackstone_like));
+        GRANODIORITE = register("granodiorite", withOptionalModdedOres(blackstone_like));
+        RHYOLITE = register("rhyolite", withOptionalModdedOres(blackstone_like));
+        WHITE_GRANITE = register("white_granite", withOptionalModdedOres(blackstone_like));
+        LIMESTONE = register("limestone", withOptionalModdedOres(limestone));
+        BEIGE_LIMESTONE = register("beige_limestone", withOptionalModdedOres(beige_limestone));
+        GREY_LIMESTONE = register("grey_limestone", withOptionalModdedOres(limestone));
+        SILTSTONE = registerSand("siltstone", withOptionalModdedOres(sandstone_like));
+        MUDSTONE = registerSand("mudstone", withOptionalModdedOres(mudstone));
+        CONGLOMERATE = registerSand("conglomerate", withOptionalModdedOres(secondary));
         KIMBERLITE = register("kimberlite", kimberlite);
         MARBLE = register("marble", decorative);
         PUMICE = register("pumice", basic);
@@ -121,19 +122,19 @@ public class BlockSchemas {
         DOLOMITE = register("dolomite", secondary_no_ores);
 
 //        deep variant schemas
-        DARK_SLATE = register("dark_slate", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
-        DEEP_BEIGE_LIMESTONE = register("deep_beige_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
-        DEEP_GREY_LIMESTONE = register("deep_grey_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
-        DEEP_LIMESTONE = register("deep_limestone", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
-        DEEP_PHYLLITE = register("deep_phyllite", create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK)));
-        DEEP_CONGLOMERATE = register("deep_conglomerate", create(DEEP_ORES));
-        DEEP_GABBRO = register("deep_gabbro", create(DEEP_ORES));
-        DEEP_GRANODIORITE = register("deep_granodiorite", create(DEEP_ORES));
-        DEEP_MUDSTONE = register("deep_mudstone", create(DEEP_ORES));
+        DARK_SLATE = register("dark_slate", withOptionalModdedOres(create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK))));
+        DEEP_BEIGE_LIMESTONE = register("deep_beige_limestone", withOptionalModdedOres(create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK))));
+        DEEP_GREY_LIMESTONE = register("deep_grey_limestone", withOptionalModdedOres(create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK))));
+        DEEP_LIMESTONE = register("deep_limestone", withOptionalModdedOres(create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK))));
+        DEEP_PHYLLITE = register("deep_phyllite", withOptionalModdedOres(create(DEEP_ORES, new BlockVariant("cobbled", Forms.BLOCK))));
+        DEEP_CONGLOMERATE = register("deep_conglomerate", withOptionalModdedOres(create(DEEP_ORES)));
+        DEEP_GABBRO = register("deep_gabbro", withOptionalModdedOres(create(DEEP_ORES)));
+        DEEP_GRANODIORITE = register("deep_granodiorite", withOptionalModdedOres(create(DEEP_ORES)));
+        DEEP_MUDSTONE = register("deep_mudstone", withOptionalModdedOres(create(DEEP_ORES)));
         DEEP_RHYOLITE = register("deep_rhyolite", create(new BlockVariant("", Forms.BLOCK)));
-        DEEP_SILTSTONE = register("deep_siltstone", create(DEEP_ORES));
+        DEEP_SILTSTONE = register("deep_siltstone", withOptionalModdedOres(create(DEEP_ORES)));
         DEEP_WEATHERED_RHYOLITE = register("deep_weathered_rhyolite", create(new BlockVariant("", Forms.BLOCK)));
-        DEEP_WHITE_GRANITE = register("deep_white_granite", create(DEEP_ORES));
+        DEEP_WHITE_GRANITE = register("deep_white_granite", withOptionalModdedOres(create(DEEP_ORES)));
         COBBLED_DEEPSLATE = register("cobbled_deepslate", create(new BlockVariant("", Forms.BLOCK)));
 
 //        vanilla block schemas
@@ -175,6 +176,25 @@ public class BlockSchemas {
 
     private static List<BlockVariant> create(BlockVariant... variants) {
         return List.of(variants);
+    }
+
+    private static List<BlockVariant> withOptionalModdedOres(List<BlockVariant> variants) {
+        if (!ModList.get().isLoaded("create") && !ModList.get().isLoaded("tfmg") && !ModList.get().isLoaded("createpropulsion")) {
+            return variants;
+        }
+        List<BlockVariant> result = new ArrayList<>(variants);
+        if (ModList.get().isLoaded("create")) {
+            result.add(CREATE_ZINC_ORE);
+        }
+        if (ModList.get().isLoaded("tfmg")) {
+            result.add(TFMG_LEAD_ORE);
+            result.add(TFMG_LITHIUM_ORE);
+            result.add(TFMG_NICKEL_ORE);
+        }
+        if (ModList.get().isLoaded("createpropulsion")) {
+            result.add(CREATE_PROPULSION_PLATINUM_ORE);
+        }
+        return result;
     }
 
     private static BlockBehaviour.Properties stone() {

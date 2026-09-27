@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "unearthed:phyllite_zinc_ore", "required": false },
+    { "id": "unearthed:slate_zinc_ore", "required": false },
+    { "id": "unearthed:gabbro_zinc_ore", "required": false },
+    { "id": "unearthed:granodiorite_zinc_ore", "required": false },
+    { "id": "unearthed:rhyolite_zinc_ore", "required": false },
+    { "id": "unearthed:white_granite_zinc_ore", "required": false },
+    { "id": "unearthed:limestone_zinc_ore", "required": false },
+    { "id": "unearthed:beige_limestone_zinc_ore", "required": false },
+    { "id": "unearthed:grey_limestone_zinc_ore", "required": false },
+    { "id": "unearthed:siltstone_zinc_ore", "required": false },
+    { "id": "unearthed:mudstone_zinc_ore", "required": false },
+    { "id": "unearthed:conglomerate_zinc_ore", "required": false },
+    { "id": "unearthed:dark_slate_zinc_ore", "required": false },
+    { "id": "unearthed:deep_beige_limestone_zinc_ore", "required": false },
+    { "id": "unearthed:deep_grey_limestone_zinc_ore", "required": false },
+    { "id": "unearthed:deep_limestone_zinc_ore", "required": false },
+    { "id": "unearthed:deep_phyllite_zinc_ore", "required": false },
+    { "id": "unearthed:deep_conglomerate_zinc_ore", "required": false },
+    { "id": "unearthed:deep_gabbro_zinc_ore", "required": false },
+    { "id": "unearthed:deep_granodiorite_zinc_ore", "required": false },
+    { "id": "unearthed:deep_mudstone_zinc_ore", "required": false },
+    { "id": "unearthed:deep_siltstone_zinc_ore", "required": false },
+    { "id": "unearthed:deep_white_granite_zinc_ore", "required": false }
+  ]
+}
