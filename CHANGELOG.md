@@ -3,14 +3,9 @@
 ## 3.2.0-1.21.1-neoforge — 2026-09-28
 
 ### Added
-- Added optional Create compatibility. When Create is installed, Unearthed generates `minecraft:andesite` with the same 14 veins of size 33 per chunk and height range as vanilla gravel.
 - Added Create zinc-ore variants for 12 surface and 11 deep Unearthed rocks, including Create-compatible drops, smelting, and crushing recipes.
 - Added optional Create: The Factory Must Grow compatibility for lead, lithium, and nickel ores across 12 surface and 11 deep Unearthed rocks. The variants preserve TFMG generation, drops, tool requirements, and lithium crushing outputs.
 - Added optional Create Propulsion: Simulated compatibility for platinum ore across 12 surface and 11 deep Unearthed rocks, preserving its world generation, iron-tool requirement, drops, smelting, blasting, and crushing outputs.
-
-### Compatibility Notes
-- Create: The Factory Must Grow compatibility activates only when TFMG is present; it does not add TFMG or Create as required dependencies.
-- Create Propulsion compatibility activates only when Create Propulsion: Simulated is present; it does not add the mod or Create as required dependencies.
 
 ## 3.1.1-1.21.1-neoforge — 2026-09-19
 
